@@ -186,7 +186,7 @@ public class TimeTableService {
 					
 					subjectStat.currentSlotAllotment[indexInTimeTable]++;
 					for(int i = 0; i < Constants.NUM_WORK_DAYS; i++)	
-						subjectSection.timeTable[i][i + indexInTimeTable] = subjectIndexInClass;
+						subjectSection.timeTable[i][(i + indexInTimeTable) % Constants.NUM_PERIODS] = subjectIndexInClass;
 					subjectSection = sectionRepo.save(subjectSection);
 
 					if (subjectTeacherStat != null) {

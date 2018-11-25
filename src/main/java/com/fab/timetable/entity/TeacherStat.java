@@ -32,6 +32,6 @@ public class TeacherStat implements Comparable<TeacherStat> {
 	public int compareTo(TeacherStat ts) {
 		if(currentCapacity != ts.currentCapacity)
 			return currentCapacity - ts.currentCapacity;
-		return 1;
+		return name.compareTo(ts.name);
 	}
 }

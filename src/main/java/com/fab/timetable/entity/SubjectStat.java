@@ -36,7 +36,7 @@ public class SubjectStat implements Comparable<SubjectStat> {
 			return (int) (ss.priority - priority);
 		if(ss.sectionCount != sectionCount)
 			return (int) (ss.sectionCount - sectionCount);
-		return 1;
+		return name.compareTo(ss.name);
 	}
 
 	public int findBestSlotForSubject(int[] tt) {
